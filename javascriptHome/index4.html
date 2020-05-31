@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <script>
+      var hitesh={
+        fname:'hitesh',
+        age:22,
+        mass:78,
+        height:1.69,
+        BMI:function()
+        {
+          this.bmi=this.mass/(this.height*this.height);
+          return this.bmi;
+        }
+      }
+      var Akshay={
+        fname:'akshay',
+        age:22,
+        mass:71,
+        height:1.05,
+        BMI:function()
+        {
+          this.bmi=this.mass/(this.height*this.height);
+          return this.bmi;
+        }
+      }
+      hitesh.BMI();
+      Akshay.BMI();
+      console.log(hitesh,Akshay);
+      </script>
+
+  </body>
+</html>

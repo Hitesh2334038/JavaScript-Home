@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h1>return function</h1>
+    <script type="text/javascript">
+      function interview(job){
+        if(job=='designer'){
+          return function(name){
+            console.log(name +',can u please about design');
+          }
+        }else if(job=='techer'){
+          return function(name){
+            console.log(name +', what u teach');
+          }
+        }else{
+          return function(name){
+            console.log('hello '+name+'what do you do?');
+          }
+        }
+      }
+
+      var Teacherquetion=interview('techer');
+      Teacherquetion('john');
+      var design=interview('designer');
+      design('hitesh');
+     var unknown=interview('soldier');
+      unknown('akshay');
+      interview('techer')('aarti');
+
+    </script>
+  </body>
+</html>

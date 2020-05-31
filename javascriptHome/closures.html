@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h1>closures</h1>
+    <script type="text/javascript">
+      // function retirement(retirementAge){
+      //   var a='years left for retirement';
+      //   return function(year){
+      //     var age=2020-year;
+      //     console.log((retirementAge-age)+a);
+      //   }
+      // }
+      // var res=retirement(65);
+      // res(1998);
+
+//function return zalyavar pan tyath thle value inner function access karu shakto
+      //retirement(66)(1999);
+
+      function interview(job){
+        var a='Hello Welcome ...';
+        var b='Tell mi about your experince..?';
+        var c='what you do ?'
+        return function(name){
+          if(job==='techer'){
+            console.log(a+' '+name+b);
+          }else{
+            console.log(a+" "+name+c);
+          }
+        }
+      }
+      var inter=interview('techer');
+      inter('hitesh');
+      interview('engg')('akshay');
+    </script>
+    <!-- clouser mhnje ya madhe bhg tu function use kela tya madhe ajun ek function use kela
+  mug jevha apn pahilyala call karnar to return karun exit hoil pan ts nahi zal inner function madhe tyache variables ajun
+ahe so to ajun hi tyache variable use karu shakto tya hech asth clouser -->
+  </body>
+</html>

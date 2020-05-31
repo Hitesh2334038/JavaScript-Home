@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Login</title>
+  </head>
+  <body>
+    <form  onsubmit="return validate()" method="post">
+      <table>
+        <tr>
+          <td>id</td>
+          <td><input type="text" id="a" placeholder="Enter ur id"/></td>
+          <td><span id="cnameerror" style="color: red">*</span></td>
+        </tr>
+        <tr>
+          <td>pass</td>
+          <td><input type="password" id="b" placeholder="Enter ur password"/></td>
+          <td><span id="passerror" style="color: red">*</span></td></tr>
+          <tr><td>confimpass</td>
+          <td><input type="password" id="conpass" placeholder="enter password again"/></td>
+          <td><span id="conpasserror" style="color: red">*</span></td>
+        </tr>
+        <tr>
+        <td>  <input type="submit"  value="submit"/></td>
+        <td>  <input type="reset"  value="clear"/></td>
+        </tr>
+      </table>
+
+
+    </form>
+    <script type="text/javascript">
+
+       function validate()
+      {
+        var cname=document.getElementById("a").value;
+          var pass=document.getElementById("b").value;
+          var conpass=document.getElementById("conpass").value;
+
+          if(cname==" ")
+          {
+          document.getElementById("cnameerror").innerHTML="enter the valid username";
+          return false;
+        }
+
+
+
+         if(pass=="")
+          {document.getElementById("passerror").innerHTML="enter the password";
+          return false;
+        }
+        if(conpass!=pass)
+         {document.getElementById("conpasserror").innerHTML="enter the same password";
+         return false;
+       }
+        return true;
+      }
+
+    </script>
+  </body>
+</html>

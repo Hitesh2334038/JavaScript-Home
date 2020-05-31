@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h1 id="demo"></h1>
+    <!-- <script type="text/javascript">
+      document.getElementById("demo").innerHTML="Welcome";
+
+    </script> -->
+    <script type="text/javascript">
+      var text,parser,xmlDoc;
+      text="<note><title>good0</title><author>david</author><title>good1</title><author>david</author></note>";
+      parser=new DOMParser();
+      xmlDoc=parser.parseFromString(text,"text/xml");
+      document.getElementById("demo").innerHTML=
+      xmlDoc.getElementsByTagName("author")[1].childNodes[0].nodeValue;
+    </script>
+  </body>
+</html>
